@@ -1390,35 +1390,63 @@ button {
 
 }
 
-/* MOBILE WIDTH FIX */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
+/* MOBILE CHAPTER FIX */
 
 @media (max-width: 650px) {
 
-    body {
+    .chapter {
         width: 100%;
-        overflow-x: hidden;
+        max-width: 100%;
+        min-width: 0;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        box-sizing: border-box;
     }
 
-    section {
+    .chapter h2 {
+        width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+
+        font-size: clamp(32px, 9vw, 48px);
+
+        line-height: 1.15;
+
+        text-align: center;
+
+        overflow-wrap: break-word;
+    }
+
+    .chapter-text {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.8;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+    .memory {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .memory img {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        box-sizing: border-box;
     }
 
 }
-
