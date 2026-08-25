@@ -205,3 +205,75 @@ surpriseButton.addEventListener("click", function() {
     });
 
 });
+
+// ==========================================
+// AGE CLOCK ❤️
+// Born: 25 August 2008, 8:30 PM
+// ==========================================
+
+const birthDate = new Date(2008, 7, 25, 20, 30, 0);
+
+function updateAge() {
+
+    const now = new Date();
+
+    const difference = now - birthDate;
+
+    const totalSeconds = Math.floor(difference / 1000);
+
+    // Days
+    const days = Math.floor(totalSeconds / 86400);
+
+    // Hours
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+
+    // Minutes
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+
+    // Seconds
+    const seconds = totalSeconds % 60;
+
+
+    // -----------------------------
+    // "6574 days old" text
+    // -----------------------------
+
+    const daysOldElement = document.getElementById("days-old");
+
+    if (daysOldElement) {
+        daysOldElement.textContent = days.toLocaleString();
+    }
+
+
+    // -----------------------------
+    // LIVE AGE CLOCK
+    // -----------------------------
+
+    const ageDays = document.getElementById("age-days");
+    const ageHours = document.getElementById("age-hours");
+    const ageMinutes = document.getElementById("age-minutes");
+    const ageSeconds = document.getElementById("age-seconds");
+
+    if (ageDays) {
+        ageDays.textContent = days.toLocaleString();
+    }
+
+    if (ageHours) {
+        ageHours.textContent = String(hours).padStart(2, "0");
+    }
+
+    if (ageMinutes) {
+        ageMinutes.textContent = String(minutes).padStart(2, "0");
+    }
+
+    if (ageSeconds) {
+        ageSeconds.textContent = String(seconds).padStart(2, "0");
+    }
+}
+
+
+// Run immediately
+updateAge();
+
+// Update every second
+setInterval(updateAge, 1000);

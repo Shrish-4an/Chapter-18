@@ -1450,3 +1450,74 @@ button {
     }
 
 }
+
+#days-old {
+    color: white;
+    font-size: 1.15em;
+    text-shadow:
+        0 0 15px rgba(255,255,255,0.25),
+        0 0 35px rgba(180,160,255,0.2);
+    transition: all 0.5s ease;
+}
+
+.age-clock {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.age-clock-label {
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 25px;
+}
+
+.age-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.age-time div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.age-time span {
+    font-size: clamp(28px, 5vw, 55px);
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow:
+        0 0 25px rgba(255,255,255,0.15);
+}
+
+.age-time small {
+    margin-top: 8px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.3);
+}
+
+.age-time b {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.25);
+}
+
+@media (max-width: 650px) {
+    .age-time {
+        gap: 8px;
+    }
+
+    .age-time b {
+        font-size: 20px;
+    }
+
+    .age-time small {
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+}
