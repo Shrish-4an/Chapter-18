@@ -276,4 +276,4 @@ function updateAge() {
 updateAge();
 
 // Update every second
-setInterval(updateAge, 1000);
+setInterval(updateAge, 1000);   
